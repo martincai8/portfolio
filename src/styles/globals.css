@@ -2,28 +2,18 @@
 
 :root {
   /* Desktop */
-  --display-font-size: 70px;
-  --display-font-weight: 800;
-  --h1-font-size: 64px;
-  --h1-font-weight: 700;
-  --h2-font-size: 35px;
-  --h2-font-weight: 700;
-  --h3-font-size: 24px;
-  --h3-font-weight: 600;
-  --body-font-size: 20px;
-  --body-font-weight: 500;
-  --body-alt-font-size: 20px;
-  --body-alt-font-weight: 800;
+  --display-font: 800 70px 'HK Grotesk', sans-serif;
+  --h1-font: 700 64px 'HK Grotesk', sans-serif;
+  --h2-font: 700 35px 'HK Grotesk', sans-serif;
+  --h3-font: 600 24px 'HK Grotesk', sans-serif;
+  --body-font: 500 20px 'HK Grotesk', sans-serif;
+  --body-alt-font: 800 20px 'HK Grotesk', sans-serif;
 
   /* Mobile */
-  --h1-font-size-m: 34px;
-  --h1-font-weight-m: 700;
-  --h2-font-size-m: 24px;
-  --h2-font-weight-m: 700;
-  --body-font-size-m: 16px;
-  --body-font-weight-m: 500;
-  --body-alt-font-size-m: 16px;
-  --body-alt-font-weight-m: 700;
+  --h1-font-m: 700 34px 'HK Grotesk', sans-serif;
+  --h2-font-m: 700 24px 'HK Grotesk', sans-serif;
+  --body-font-m: 500 16px 'HK Grotesk', sans-serif;
+  --body-alt-font-m: 700 16px 'HK Grotesk', sans-serif;
 
   /* Colors */
   --light-matcha: #96c2a5;
@@ -31,7 +21,7 @@
   --dark: #26272c;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -40,6 +30,10 @@ body {
   line-height: 1.6;
   font-family: "HK Grotesk", sans-serif;
   font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
 }
 
 /* prettier-ignore */
@@ -59,4 +53,8 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+input, textarea, button, select {
+  font: inherit;
 }
