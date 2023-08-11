@@ -11,7 +11,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <style jsx global>{`
         :root {
-          --font-hk: ${hankenGrotesk.style.fontFamily}, sans-serif;
+          --font-hk: ${hankenGrotesk.style.fontFamily}, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         }
       `}</style>
       <Component {...pageProps} />
