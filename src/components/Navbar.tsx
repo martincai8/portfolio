@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
-import SocialIcons from "./SocialIcons";
+import ProfileIcons from "./ProfileIcons";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -76,7 +76,7 @@ export default function Navbar() {
               onAnimationComplete={handleAnimationComplete}
             >
               <ul className={styles.links}>{renderNavLinks()}</ul>
-              <SocialIcons />
+              <ProfileIcons />
             </motion.div>
           </>
         )}
