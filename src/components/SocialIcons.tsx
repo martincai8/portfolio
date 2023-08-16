@@ -2,15 +2,15 @@ import React from "react";
 import styles from "@/styles/SocialIcons.module.css";
 
 function LinkedInIcon() {
-  return <img src="/images/linkedin.svg" alt="LinkedIn" />;
+  return <img src="/images/l.svg" alt="LinkedIn" />;
 }
 
 function GitHubIcon() {
-  return <img src="/images/github.svg" alt="GitHub" />;
+  return <img src="/images/g.svg" alt="GitHub" />;
 }
 
 function EmailIcon() {
-  return <img src="/images/mail.svg" alt="Email" />;
+  return <img src="/images/m.svg" alt="Email" />;
 }
 
 export default function SocialIcons() {

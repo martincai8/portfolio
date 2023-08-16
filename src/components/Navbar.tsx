@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 import SocialIcons from "./SocialIcons";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -13,40 +14,73 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [animating, setAnimating] = useState(false);
+  const ANIMATION_DURATION = 0.3;
+
+  const handleCloseMenu = () => {
+    setAnimating(true);
+    setTimeout(() => setMenuOpen(false), ANIMATION_DURATION * 1000);
+  };
+
+  const handleAnimationComplete = () => {
+    setAnimating(false);
+  };
+
+  const renderNavLinks = () =>
+    navLinks.map((link) => (
+      <li key={link.href}>
+        <Link href={link.href}>{link.label}</Link>
+      </li>
+    ));
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className={styles.navbar}>
       <div className={styles.logo}>m</div>
-      <ul className={styles.links}>
-        {navLinks.map((link, index) => (
-          <li key={index}>
-            <Link href={link.href}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
+      <ul className={styles.links}>{renderNavLinks()}</ul>
 
-      {!menuOpen && (
+      {!menuOpen && !animating && (
         <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
           <img src="/images/menu.svg" alt="Menu" />
         </button>
       )}
 
-      {menuOpen && (
-        <>
-          <button className={styles.closeButton} onClick={() => setMenuOpen(false)} aria-label="Close menu">
-            <img src="/images/close.svg" alt="Close" />
-          </button>
-          <div className={styles.mobileMenu}>
-            <ul className={styles.links}>
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-            <SocialIcons />
-          </div>
-        </>
-      )}
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.button
+              className={styles.closeButton}
+              onClick={handleCloseMenu}
+              aria-label="Close menu"
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: ANIMATION_DURATION }}
+            >
+              <img src="/images/close.svg" alt="Close" />
+            </motion.button>
+            <motion.div
+              className={styles.mobileMenu}
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              transition={{ duration: ANIMATION_DURATION }}
+              exit={{ x: "100%" }}
+              onAnimationComplete={handleAnimationComplete}
+            >
+              <ul className={styles.links}>{renderNavLinks()}</ul>
+              <SocialIcons />
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
