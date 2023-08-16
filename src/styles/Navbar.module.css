@@ -9,9 +9,9 @@
 
 .links {
   display: flex;
+  list-style-type: none;
   gap: 35px;
   font: var(--body-font);
-  list-style-type: none;
 }
 
 .menuButton, .closeButton {
@@ -19,6 +19,8 @@
   background: none;
   border: none;
   cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
 }
 
 .menuButton img, .closeButton img {
@@ -54,7 +56,5 @@
 
   .menuButton, .closeButton {
     display: block;
-    margin-left: auto;
-    z-index: 2;
   }
 }
