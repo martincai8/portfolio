@@ -3,7 +3,7 @@ import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import ProfileIcons from "./ProfileIcons";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import menu from "../../public/images/menu.svg";
 import close from "../../public/images/close.svg";
 
@@ -69,7 +69,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <>
-            <motion.button
+            <m.button
               className={styles.closeButton}
               onClick={handleCloseMenu}
               aria-label="Close menu"
@@ -85,8 +85,8 @@ export default function Navbar() {
                   height: "auto"
                 }}
               />
-            </motion.button>
-            <motion.div
+            </m.button>
+            <m.div
               className={styles.mobileMenu}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -96,7 +96,7 @@ export default function Navbar() {
             >
               <ul className={styles.links}>{renderNavLinks()}</ul>
               <ProfileIcons />
-            </motion.div>
+            </m.div>
           </>
         )}
       </AnimatePresence>

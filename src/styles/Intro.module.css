@@ -1,0 +1,64 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 100px;
+}
+
+.introText{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.text {
+  font: var(--display-font);
+}
+
+.wave {
+  margin-left: 0.5rem;
+  display: inline-block;
+  transform-origin: 85% 85%;
+}
+
+.descriptionText{
+  font: var(--display-font);
+  color: var(--matcha);
+
+  display: block;
+  height: 100px;
+  width: 750px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  .introText {
+    gap: 10px;
+  }
+
+  .text {
+    font: 800 34px var(--font-hk);
+  }
+  
+  .descriptionText {
+    font: 800 24px var(--font-hk);
+  }
+
+  .descriptionText {
+    height: 100px;
+    width: 275px;
+  }
+
+  .cartoon {
+    height: 250px;
+    width: auto;
+  }
+}
