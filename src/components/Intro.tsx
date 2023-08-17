@@ -21,7 +21,7 @@ export default function Intro() {
     <div className={styles.intro}>
       <div className={styles.introText}>
         <h1 className={styles.text}>
-          Hi, I'm Martin
+          Hi, I&apos;m Martin
           <m.div
             className={styles.wave}
             animate={{ rotate: [0, 15, 0] }}
