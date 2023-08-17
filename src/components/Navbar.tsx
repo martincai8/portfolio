@@ -48,7 +48,9 @@ export default function Navbar() {
 
   return (
     <header className={styles.navbar}>
-      <div className={styles.logo}>m</div>
+      <Link legacyBehavior href="/">
+        <a className={styles.logo}>mc</a>
+      </Link>
       <ul className={styles.links}>{renderNavLinks()}</ul>
 
       {!menuOpen && !animating && (
