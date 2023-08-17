@@ -58,6 +58,7 @@ export default function Navbar() {
           <Image
             src={menu}
             alt="Menu"
+            style={{width: "24px", height: "auto"}}
           />
         </button>
       )}
@@ -74,9 +75,9 @@ export default function Navbar() {
               transition={{ duration: ANIMATION_DURATION }}
             >
               <Image
-
                 src={close}
                 alt="Close menu"
+                style={{width: "24px", height: "auto"}}
               />
             </m.button>
             <m.div

@@ -10,8 +10,6 @@
 .logo {
   font: 800 24px var(--font-hk);
   text-decoration: underline;
-  width: 40px;
-  height: auto;
 }
 
 .links {
@@ -23,8 +21,6 @@
 
 .menuButton {
   display: none;
-  margin: 0;
-  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -62,6 +58,9 @@
   .menuButton {
     display: block;
     background: none;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
     border: none;
     cursor: pointer;
     margin-left: auto;
