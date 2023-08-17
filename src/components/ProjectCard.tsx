@@ -10,14 +10,7 @@ interface ProjectCardProps {
   extra: string;
 }
 
-export default function ProjectCard({
-  title,
-  startDate,
-  endDate,
-  description,
-  tags,
-  extra
-}: ProjectCardProps) {
+export default function ProjectCard({ title, startDate, endDate, description, tags, extra }: ProjectCardProps) {
   return (
     <>
       <h1>Hello World</h1>

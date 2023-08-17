@@ -6,7 +6,7 @@
   margin-top: 100px;
 }
 
-.introText{
+.introText {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,7 +23,7 @@
   transform-origin: 85% 85%;
 }
 
-.descriptionText{
+.descriptionText {
   font: var(--display-font);
   color: var(--matcha);
 
@@ -32,12 +32,37 @@
   width: 750px;
 }
 
+.cartoon {
+  height: auto;
+  width: 20%;
+}
+
+@media screen and (max-width: 1280px) {
+  .intro {
+    gap: 0px;
+  }
+  .text {
+    font: 800 48px var(--font-hk);
+  }
+
+  .descriptionText {
+    font: 800 48px var(--font-hk);
+    height: 48px;
+    width: 550px;
+  }
+
+  .cartoon {
+    height: auto;
+    max-width: 60%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .intro {
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    gap: 10px;
+    gap: 40px;
   }
 
   .introText {
@@ -47,13 +72,10 @@
   .text {
     font: 800 34px var(--font-hk);
   }
-  
-  .descriptionText {
-    font: 800 24px var(--font-hk);
-  }
 
   .descriptionText {
-    height: 100px;
+    font: 800 24px var(--font-hk);
+    height: 34px;
     width: 275px;
   }
 

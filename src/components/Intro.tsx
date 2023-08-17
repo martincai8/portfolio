@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "@/styles/Intro.module.css";
 import { m } from "framer-motion";
 import cartoon from "../../public/images/cartoon.svg";
@@ -11,6 +11,8 @@ const descriptions = [
   "a software dev.",
   1000,
   "a hackathon organizer.",
+  1000,
+  "a sports nerd.",
   1000,
   "a disc chaser.",
   1000
@@ -47,7 +49,7 @@ export default function Intro() {
         />
       </div>
 
-      <Image className={styles.cartoon} src={cartoon} alt="cartoon" style={{ height: "100", width: "auto" }}></Image>
+      <Image className={styles.cartoon} src={cartoon} alt="cartoon"></Image>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Hanken_Grotesk } from "next/font/google";
-import { LazyMotion, domAnimation } from "framer-motion"
+import { LazyMotion, domAnimation } from "framer-motion";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"]
