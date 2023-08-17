@@ -58,10 +58,6 @@ export default function Navbar() {
           <Image
             src={menu}
             alt="Menu"
-            style={{
-              width: "30",
-              height: "auto"
-            }}
           />
         </button>
       )}
@@ -70,7 +66,7 @@ export default function Navbar() {
         {menuOpen && (
           <>
             <m.button
-              className={styles.closeButton}
+              className={styles.menuButton}
               onClick={handleCloseMenu}
               aria-label="Close menu"
               initial={{ opacity: 1 }}
@@ -78,12 +74,9 @@ export default function Navbar() {
               transition={{ duration: ANIMATION_DURATION }}
             >
               <Image
+
                 src={close}
                 alt="Close menu"
-                style={{
-                  width: "30",
-                  height: "auto"
-                }}
               />
             </m.button>
             <m.div

@@ -10,6 +10,8 @@
 .logo {
   font: 800 24px var(--font-hk);
   text-decoration: underline;
+  width: 40px;
+  height: auto;
 }
 
 .links {
@@ -19,24 +21,18 @@
   font: var(--body-font);
 }
 
-.menuButton,
-.closeButton {
+.menuButton {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: auto;
-  z-index: 2;
-}
-
-.menuButton img,
-.closeButton img {
-  width: 30px;
-  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .logo,
+  .navbar {
+    height: 80px;
+    margin-bottom: 40px;
+  }
+
   .links {
     display: none;
   }
@@ -63,8 +59,12 @@
     margin-bottom: 40px;
   }
 
-  .menuButton,
-  .closeButton {
+  .menuButton {
     display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 2;
   }
 }
