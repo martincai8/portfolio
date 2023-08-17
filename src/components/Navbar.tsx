@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import ProfileIcons from "./ProfileIcons";
 import { motion, AnimatePresence } from "framer-motion";
+import menu from "../../public/images/menu.svg";
+import close from "../../public/images/close.svg";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -50,7 +53,14 @@ export default function Navbar() {
 
       {!menuOpen && !animating && (
         <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
-          <img src="/images/menu.svg" alt="Menu" />
+          <Image
+            src={menu}
+            alt="Menu"
+            style={{
+              width: "30",
+              height: "auto"
+            }}
+          />
         </button>
       )}
 
@@ -65,7 +75,14 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: ANIMATION_DURATION }}
             >
-              <img src="/images/close.svg" alt="Close" />
+              <Image
+                src={close}
+                alt="Close menu"
+                style={{
+                  width: "30",
+                  height: "auto"
+                }}
+              />
             </motion.button>
             <motion.div
               className={styles.mobileMenu}
