@@ -1,6 +1,6 @@
 :root {
   /* Desktop */
-  --display-font: 800 70px  var(--font-hk);
+  --display-font: 800 70px var(--font-hk);
   --h1-font: 700 64px var(--font-hk);
   --h2-font: 700 35px var(--font-hk);
   --h3-font: 700 24px var(--font-hk);
@@ -15,15 +15,17 @@
   --secondary-body-font-m: 600 14px var(--font-hk);
 
   /* Colors */
-  --oat-milk: #FDFCFB;
+  --oat-milk: #fdfcfb;
   --light-matcha-gradient: white;
-  --foam: #E0ECE5;
-  --dirty-matcha: #86948B;
-  --matcha: #408A67;
-  --sesame: #2C2B33;
+  --foam: #e0ece5;
+  --dirty-matcha: #86948b;
+  --matcha: #408a67;
+  --sesame: #2c2b33;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -53,12 +55,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+/* 
 img {
   max-width: 100%;
   display: block;
-}
+} */
 
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   font: inherit;
 }

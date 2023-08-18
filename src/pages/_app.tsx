@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Hanken_Grotesk } from "next/font/google";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"]
@@ -8,7 +9,7 @@ const hankenGrotesk = Hanken_Grotesk({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       <style jsx global>{`
         :root {
           --font-hk: ${hankenGrotesk.style.fontFamily}, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -16,6 +17,6 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Component {...pageProps} />
-    </>
+    </LazyMotion>
   );
 }
