@@ -55,11 +55,7 @@ export default function Navbar() {
 
       {!menuOpen && !animating && (
         <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
-          <Image
-            src={menu}
-            alt="Menu"
-            style={{width: "24px", height: "auto"}}
-          />
+          <Image src={menu} alt="Menu" style={{ width: "24px", height: "auto" }} />
         </button>
       )}
 
@@ -74,11 +70,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: ANIMATION_DURATION }}
             >
-              <Image
-                src={close}
-                alt="Close menu"
-                style={{width: "24px", height: "auto"}}
-              />
+              <Image src={close} alt="Close menu" style={{ width: "24px", height: "auto" }} />
             </m.button>
             <m.div
               className={styles.mobileMenu}
