@@ -6,18 +6,7 @@ import cartoon from "../../public/images/cartoon.svg";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
-const descriptions = [
-  "a 4th year CS student.",
-  1000,
-  "a software developer.",
-  1000,
-  "a hackathon organizer.",
-  1000,
-  "a sports nerd.",
-  1000,
-  "a photographer.",
-  1000
-];
+const descriptions = ["a 4th year CS student.", 1000, "a software developer.", 1000, "a hackathon organizer.", 1000];
 
 export default function Intro() {
   return (
