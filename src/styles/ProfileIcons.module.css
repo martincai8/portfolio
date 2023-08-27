@@ -3,3 +3,15 @@
   align-items: center;
   gap: 20px;
 }
+
+.icons a img {
+  height: 40px;
+  width: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .icons a img {
+    height: 30px;
+    width: auto;
+  }
+}

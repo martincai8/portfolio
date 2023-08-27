@@ -29,12 +29,26 @@
 
   display: block;
   height: 100px;
-  width: 750px;
+  width: 19.5ch;
+}
+
+.profileIcons {
+  margin-top: 60px;
 }
 
 .cartoon {
   height: auto;
   width: auto;
+}
+
+@media screen and (max-width: 1450px) {
+  .text {
+    font: 800 60px var(--font-hk);
+  }
+
+  .descriptionText {
+    font: 800 60px var(--font-hk);
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -48,12 +62,21 @@
   .descriptionText {
     font: 800 48px var(--font-hk);
     height: 48px;
-    width: 550px;
   }
 
   .cartoon {
     height: auto;
     width: 20%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .text {
+    font: 800 40px var(--font-hk);
+  }
+
+  .descriptionText {
+    font: 800 40px var(--font-hk);
   }
 }
 
@@ -75,11 +98,14 @@
   .descriptionText {
     font: 800 24px var(--font-hk);
     height: 34px;
-    width: 275px;
   }
 
   .cartoon {
     height: 250px;
     width: auto;
+  }
+
+  .profileIcons {
+    display: none;
   }
 }

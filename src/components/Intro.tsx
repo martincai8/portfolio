@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/Intro.module.css";
+import ProfileIcons from "./ProfileIcons";
 import { m } from "framer-motion";
 import cartoon from "../../public/images/cartoon.svg";
 import Image from "next/image";
@@ -8,13 +9,13 @@ import { TypeAnimation } from "react-type-animation";
 const descriptions = [
   "a 4th year CS student.",
   1000,
-  "a software dev.",
+  "a software developer.",
   1000,
   "a hackathon organizer.",
   1000,
   "a sports nerd.",
   1000,
-  "a disc chaser.",
+  "a photographer.",
   1000
 ];
 
@@ -47,6 +48,10 @@ export default function Intro() {
           repeat={Infinity}
           speed={25}
         />
+
+        <div className={styles.profileIcons}>
+          <ProfileIcons />
+        </div>
       </div>
 
       <Image className={styles.cartoon} src={cartoon} alt="cartoon"></Image>
