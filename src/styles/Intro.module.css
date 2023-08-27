@@ -38,7 +38,7 @@
 
 .cartoon {
   height: auto;
-  width: auto;
+  width: 400px;
 }
 
 @media screen and (max-width: 1450px) {
@@ -65,8 +65,8 @@
   }
 
   .cartoon {
+    width: 300px;
     height: auto;
-    width: 20%;
   }
 }
 
