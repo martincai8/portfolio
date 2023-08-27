@@ -25,13 +25,13 @@ export default function About() {
         {!isMobile && <h1 className={styles.h1}>About</h1>}
         <h3 className={styles.h3}>Hello there!</h3>
         <p className={styles.description}>
-          I'm Martin, a full-stack developer with a passion for building products to improve the lives of those around
-          me. I&apos;m currently pursuing a degree in Computer Science as a 4th year student at the University of
+          I&apos;m Martin, a full-stack developer with a passion for building products to improve the lives of those
+          around me. I&apos;m currently pursuing a degree in Computer Science as a 4th year student at the University of
           British Columbia.
         </p>
         <p className={styles.description}>
-          I'm passionate about harnessing my skills to empower others and create positive impacts in the community. This
-          passion shines through in my personal projects as well as in the hackathons I've had the pleasure of
+          I&apos;m passionate about harnessing my skills to empower others and create positive impacts in the community.
+          This passion shines through in my personal projects as well as in the hackathons I&apos;ve had the pleasure of
           organizing with my friends at nwPlus.
         </p>
         <p className={styles.description}>
