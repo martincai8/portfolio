@@ -15,6 +15,7 @@
 
 .text {
   font: var(--display-font);
+  font-size: clamp(34px, 5vw, 70px);
 }
 
 .wave {
@@ -25,6 +26,7 @@
 
 .descriptionText {
   font: var(--display-font);
+  font-size: clamp(24px, 5vw, 70px);
   color: var(--matcha);
 
   display: block;
@@ -37,47 +39,8 @@
 }
 
 .cartoon {
-  height: auto;
-  width: 400px;
-}
-
-@media screen and (max-width: 1450px) {
-  .text {
-    font: 800 60px var(--font-hk);
-  }
-
-  .descriptionText {
-    font: 800 60px var(--font-hk);
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .intro {
-    gap: 0px;
-  }
-  .text {
-    font: 800 48px var(--font-hk);
-  }
-
-  .descriptionText {
-    font: 800 48px var(--font-hk);
-    height: 48px;
-  }
-
-  .cartoon {
-    width: 300px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .text {
-    font: 800 40px var(--font-hk);
-  }
-
-  .descriptionText {
-    font: 800 40px var(--font-hk);
-  }
+  height: clamp(250px, 30vw, 500px);
+  width: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -91,18 +54,9 @@
     gap: 10px;
   }
 
-  .text {
-    font: 800 34px var(--font-hk);
-  }
-
   .descriptionText {
     font: 800 24px var(--font-hk);
     height: 34px;
-  }
-
-  .cartoon {
-    height: 250px;
-    width: auto;
   }
 
   .profileIcons {
