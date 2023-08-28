@@ -25,11 +25,16 @@ export default function Navbar() {
     setTimeout(() => setMenuOpen(false), ANIMATION_DURATION * 1000);
   };
 
+  const handleCloseMenuClick = () => {
+    setAnimating(true);
+    setTimeout(() => setMenuOpen(false), ANIMATION_DURATION * 100);
+  };
+
   const handleAnimationComplete = () => {
     setAnimating(false);
   };
 
-  const renderNavLinks = () =>
+  const renderNavLinks = (mobile: boolean) =>
     navLinks.map((link) => (
       <li key={link.href}>
         <Link href={link.href}>{link.label}</Link>
@@ -51,7 +56,7 @@ export default function Navbar() {
       <Link legacyBehavior href="/">
         <a className={styles.logo}>mc</a>
       </Link>
-      <ul className={styles.links}>{renderNavLinks()}</ul>
+      <ul className={styles.links}>{renderNavLinks(false)}</ul>
 
       {!menuOpen && !animating && (
         <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
@@ -80,7 +85,7 @@ export default function Navbar() {
               exit={{ x: "100%" }}
               onAnimationComplete={handleAnimationComplete}
             >
-              <ul className={styles.links}>{renderNavLinks()}</ul>
+              <ul className={styles.links}>{renderNavLinks(true)}</ul>
               <ProfileIcons />
             </m.div>
           </>

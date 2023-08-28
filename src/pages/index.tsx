@@ -7,15 +7,21 @@ import About from "@/components/About";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Martin Cai</title>
-        <meta name="description" content="My portfolio site" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div id="/">
+        <Head>
+          <title>Martin Cai</title>
+          <meta name="description" content="My portfolio site" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+      </div>
       <Navbar />
-      <Intro />
-      <About />
+      <div id="intro">
+        <Intro />
+      </div>
+      <div id="about">
+        <About />
+      </div>
     </>
   );
 }
