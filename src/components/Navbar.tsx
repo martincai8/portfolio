@@ -55,7 +55,9 @@ export default function Navbar() {
 
   const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (href.startsWith("/#")) {
+    if (href === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (href.startsWith("/#")) {
       const elementId = href.substring(2);
       scrollToElement(elementId);
     } else {
@@ -85,7 +87,15 @@ export default function Navbar() {
     <div className={styles.navbarWrapper}>
       <header className={styles.navbar}>
         <Link legacyBehavior href="/">
-          <a className={styles.logo}>mc</a>
+          <a
+            className={styles.logo}
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            mc
+          </a>
         </Link>
         <ul className={styles.links}>{renderNavLinks()}</ul>
 

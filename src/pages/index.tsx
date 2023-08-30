@@ -8,14 +8,12 @@ import Experience from "@/components/Experience";
 export default function Home() {
   return (
     <>
-      <div id="/">
-        <Head>
-          <title>Martin Cai</title>
-          <meta name="description" content="My portfolio site" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-      </div>
+      <Head>
+        <title>Martin Cai</title>
+        <meta name="description" content="My portfolio site" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <div className="container">
         <div id="intro">
