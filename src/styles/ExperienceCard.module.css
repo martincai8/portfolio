@@ -13,3 +13,9 @@
 .company {
   font: var(--h2-font);
 }
+
+@media screen and (max-width: 768px) {
+  .company {
+    font: var(--h2-font-m);
+  }
+}

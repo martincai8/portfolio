@@ -44,8 +44,20 @@
   list-style: inside;
   padding-left: 0;
   font: var(--body-font);
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 768px) {
+  .title {
+    font: var(--h3-font-m);
+  }
+
+  .date {
+    font: var(--body-alt-font-m);
+  }
+
+  .description {
+    font: var(--body-font-m);
+    margin-bottom: 0px;
+  }
 }
