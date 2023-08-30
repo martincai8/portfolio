@@ -65,8 +65,8 @@ export default function Navbar() {
   };
 
   const renderNavLinks = () =>
-    navLinks.map((link) => (
-      <Link href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
+    navLinks.map((link, index) => (
+      <Link key={index} href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
         {link.label}
       </Link>
     ));
