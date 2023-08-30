@@ -10,6 +10,7 @@
   /* Mobile */
   --h1-font-m: 700 34px var(--font-hk);
   --h2-font-m: 700 24px var(--font-hk);
+  --h3-font-m: 700 20px var(--font-hk);
   --body-font-m: 500 16px var(--font-hk);
   --body-alt-font-m: 700 16px var(--font-hk);
   --secondary-body-font-m: 600 14px var(--font-hk);
@@ -67,4 +68,16 @@ textarea,
 button,
 select {
   font: inherit;
+}
+
+.container {
+  width: 85%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 75%;
+  }
 }

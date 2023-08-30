@@ -1,14 +1,23 @@
 import React from "react";
+import Role, { RoleProps } from "@/components/Role";
+import styles from "@/styles/ExperienceCard.module.css";
+import Image from "next/image";
+import Later from "../../public/images/later.png";
 
 interface ExperienceCardProps {
-  title: string;
   company: string;
   logo: string;
-  startDate: string;
-  endDate: string;
-  description: string[];
+  roles: RoleProps[];
 }
 
-export default function ExperienceCard({ title, company, logo, startDate, endDate, description }: ExperienceCardProps) {
-  return <div></div>;
+export default function ExperienceCard({ company, logo, roles }: ExperienceCardProps) {
+  return (
+    <div className={styles.experienceCard}>
+      <Image src={logo} alt={company} className={styles.logo} width={40} height={40}></Image>
+      <h2 className={styles.company}>{company}</h2>
+      {roles.map((role, index) => (
+        <Role key={index} {...role} />
+      ))}
+    </div>
+  );
 }
