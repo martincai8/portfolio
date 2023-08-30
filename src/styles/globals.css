@@ -68,3 +68,15 @@ button,
 select {
   font: inherit;
 }
+
+.container {
+  width: 85%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 75%;
+  }
+}

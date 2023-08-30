@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Intro from "@/components/Intro";
 import styles from "@/styles/Home.module.css";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -16,11 +17,14 @@ export default function Home() {
         </Head>
       </div>
       <Navbar />
-      <div id="intro">
-        <Intro />
-      </div>
-      <div id="about">
-        <About />
+      <div className="container">
+        <div id="intro">
+          <Intro />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <Experience />
       </div>
     </>
   );
