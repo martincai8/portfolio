@@ -21,8 +21,8 @@ export default function Role({ title, startDate, endDate, description }: RolePro
           {startDate} - {endDate}
         </p>
         <ul className={styles.description}>
-          {description.map((desc) => (
-            <li>{desc}</li>
+          {description.map((desc, index) => (
+            <li key={index}>{desc}</li>
           ))}
         </ul>
       </div>
