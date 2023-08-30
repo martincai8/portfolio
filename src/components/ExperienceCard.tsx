@@ -13,8 +13,10 @@ interface ExperienceCardProps {
 export default function ExperienceCard({ company, logo, roles }: ExperienceCardProps) {
   return (
     <div className={styles.experienceCard}>
-      <Image src={logo} alt={company} className={styles.logo} width={40} height={40}></Image>
-      <h2 className={styles.company}>{company}</h2>
+      <div className={styles.title}>
+        <Image src={logo} alt={company} className={styles.logo} width={40} height={40}></Image>
+        <h2 className={styles.company}>{company}</h2>
+      </div>
       {roles.map((role, index) => (
         <Role key={index} {...role} />
       ))}
