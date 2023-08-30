@@ -28,6 +28,7 @@
   list-style-type: none;
   gap: 35px;
   font: var(--body-font);
+  background-color: rgba(253, 252, 251, 0);
 }
 
 .menuButton {

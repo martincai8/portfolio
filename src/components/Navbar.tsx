@@ -64,13 +64,11 @@ export default function Navbar() {
     handleCloseMenuClick();
   };
 
-  const renderNavLinks = (mobile: boolean) =>
+  const renderNavLinks = () =>
     navLinks.map((link) => (
-      <li key={link.href}>
-        <a href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
-          {link.label}
-        </a>
-      </li>
+      <Link href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
+        {link.label}
+      </Link>
     ));
 
   useEffect(() => {
@@ -89,7 +87,7 @@ export default function Navbar() {
         <Link legacyBehavior href="/">
           <a className={styles.logo}>mc</a>
         </Link>
-        <ul className={styles.links}>{renderNavLinks(false)}</ul>
+        <ul className={styles.links}>{renderNavLinks()}</ul>
 
         {!menuOpen && !animating && (
           <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
@@ -118,7 +116,7 @@ export default function Navbar() {
                 exit={{ x: "100%" }}
                 onAnimationComplete={handleAnimationComplete}
               >
-                <ul className={styles.links}>{renderNavLinks(true)}</ul>
+                <ul className={styles.links}>{renderNavLinks()}</ul>
                 <ProfileIcons />
               </m.div>
             </>
