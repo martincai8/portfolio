@@ -24,7 +24,9 @@ export default function Home() {
         <div id="about">
           <About />
         </div>
-        <Experience />
+        <div id="experience">
+          <Experience />
+        </div>
       </div>
     </>
   );

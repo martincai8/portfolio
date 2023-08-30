@@ -36,6 +36,7 @@ body {
   font: var(--body-font);
   color: var(--sesame);
   scroll-behavior: smooth;
+  scroll-padding-top: 150px;
 }
 
 body {
@@ -57,6 +58,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+a:focus {
+  text-decoration: none;
+}
 /* 
 img {
   max-width: 100%;
@@ -74,10 +79,16 @@ select {
   width: 85%;
   max-width: 1300px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
   .container {
     width: 75%;
+  }
+
+  html,
+  body {
+    scroll-padding-top: 80px;
   }
 }

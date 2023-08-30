@@ -3,7 +3,7 @@ import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import ProfileIcons from "./ProfileIcons";
-import { m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, animate } from "framer-motion";
 import menu from "../../public/images/menu.svg";
 import close from "../../public/images/close.svg";
 
@@ -34,11 +34,41 @@ export default function Navbar() {
     setAnimating(false);
   };
 
-  const renderNavLinks = (mobile: boolean) =>
-    navLinks.map((link) => (
-      <li key={link.href}>
-        <Link href={link.href}>{link.label}</Link>
-      </li>
+  const scrollToElement = (elementId: string) => {
+    const element = document.getElementById(elementId);
+
+    if (!element) {
+      console.error(`Element with id ${elementId} not found`);
+      return;
+    }
+
+    const offset = window.innerWidth > 768 ? 125 : 80;
+    const target = element.offsetTop - offset;
+    animate(window.scrollY, target, {
+      type: "tween",
+      duration: 0,
+      onUpdate: (latest) => {
+        window.scrollTo(0, latest);
+      }
+    });
+  };
+
+  const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (href.startsWith("/#")) {
+      const elementId = href.substring(2);
+      scrollToElement(elementId);
+    } else {
+      window.location.href = href;
+    }
+    handleCloseMenuClick();
+  };
+
+  const renderNavLinks = () =>
+    navLinks.map((link, index) => (
+      <Link key={index} href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
+        {link.label}
+      </Link>
     ));
 
   useEffect(() => {
@@ -52,45 +82,47 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={styles.navbar}>
-      <Link legacyBehavior href="/">
-        <a className={styles.logo}>mc</a>
-      </Link>
-      <ul className={styles.links}>{renderNavLinks(false)}</ul>
+    <div className={styles.navbarWrapper}>
+      <header className={styles.navbar}>
+        <Link legacyBehavior href="/">
+          <a className={styles.logo}>mc</a>
+        </Link>
+        <ul className={styles.links}>{renderNavLinks()}</ul>
 
-      {!menuOpen && !animating && (
-        <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
-          <Image src={menu} alt="Menu" style={{ width: "24px", height: "auto" }} />
-        </button>
-      )}
-
-      <AnimatePresence>
-        {menuOpen && (
-          <>
-            <m.button
-              className={styles.menuButton}
-              onClick={handleCloseMenu}
-              aria-label="Close menu"
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: ANIMATION_DURATION }}
-            >
-              <Image src={close} alt="Close menu" style={{ width: "24px", height: "auto" }} />
-            </m.button>
-            <m.div
-              className={styles.mobileMenu}
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              transition={{ duration: ANIMATION_DURATION }}
-              exit={{ x: "100%" }}
-              onAnimationComplete={handleAnimationComplete}
-            >
-              <ul className={styles.links}>{renderNavLinks(true)}</ul>
-              <ProfileIcons />
-            </m.div>
-          </>
+        {!menuOpen && !animating && (
+          <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Open menu">
+            <Image src={menu} alt="Menu" style={{ width: "24px", height: "auto" }} />
+          </button>
         )}
-      </AnimatePresence>
-    </header>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <>
+              <m.button
+                className={styles.menuButton}
+                onClick={handleCloseMenu}
+                aria-label="Close menu"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: ANIMATION_DURATION }}
+              >
+                <Image src={close} alt="Close menu" style={{ width: "24px", height: "auto" }} />
+              </m.button>
+              <m.div
+                className={styles.mobileMenu}
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                transition={{ duration: ANIMATION_DURATION }}
+                exit={{ x: "100%" }}
+                onAnimationComplete={handleAnimationComplete}
+              >
+                <ul className={styles.links}>{renderNavLinks()}</ul>
+                <ProfileIcons />
+              </m.div>
+            </>
+          )}
+        </AnimatePresence>
+      </header>
+    </div>
   );
 }
