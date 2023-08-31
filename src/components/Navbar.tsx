@@ -25,11 +25,6 @@ export default function Navbar() {
     setTimeout(() => setMenuOpen(false), ANIMATION_DURATION * 1000);
   };
 
-  const handleCloseMenuClick = () => {
-    setAnimating(true);
-    setTimeout(() => setMenuOpen(false), ANIMATION_DURATION * 100);
-  };
-
   const handleAnimationComplete = () => {
     setAnimating(false);
   };
@@ -63,7 +58,7 @@ export default function Navbar() {
     } else {
       window.location.href = href;
     }
-    handleCloseMenuClick();
+    handleCloseMenu();
   };
 
   const renderNavLinks = () =>
@@ -126,8 +121,10 @@ export default function Navbar() {
                 exit={{ x: "100%" }}
                 onAnimationComplete={handleAnimationComplete}
               >
-                <ul className={styles.links}>{renderNavLinks()}</ul>
-                <ProfileIcons />
+                <div className={styles.contentWrapper}>
+                  <ul className={styles.links}>{renderNavLinks()}</ul>
+                  <ProfileIcons />
+                </div>
               </m.div>
             </>
           )}
