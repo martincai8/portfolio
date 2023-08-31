@@ -1,21 +1,34 @@
 import React from "react";
 import Image from "next/image";
 import styles from "@/styles/Tag.module.css";
+import reactLogo from "../../public/images/react.png";
+import nodeLogo from "../../public/images/node.png";
+import expressLogo from "../../public/images/express.png";
+import firebaseLogo from "../../public/images/firebase.png";
+import flaskLogo from "../../public/images/flask.png";
+import gptLogo from "../../public/images/gpt.png";
+import javascriptLogo from "../../public/images/javascript.png";
+import typescriptLogo from "../../public/images/typescript.png";
+import mongoDBLogo from "../../public/images/mongodb.png";
+import nextLogo from "../../public/images/next.png";
+import postgresqlLogo from "../../public/images/postgresql.png";
+import pythonLogo from "../../public/images/python.png";
+import reduxLogo from "../../public/images/redux.png";
 
 const logos = {
-  React: "/images/react.png",
-  "Node.js": "/images/node.png",
-  Express: "/images/express.png",
-  Firebase: "/images/firebase.png",
-  Flask: "/images/flask.png",
-  "GPT-4": "/images/gpt.png",
-  Javascript: "/images/javascript.png",
-  Typescript: "/images/typescript.png",
-  MongoDB: "/images/mongodb.png",
-  "Next.js": "/images/next.png",
-  PostgreSQL: "/images/postgresql.png",
-  Python: "/images/python.png",
-  Redux: "/images/redux.png"
+  React: reactLogo,
+  "Node.js": nodeLogo,
+  Express: expressLogo,
+  Firebase: firebaseLogo,
+  Flask: flaskLogo,
+  "GPT-4": gptLogo,
+  Javascript: javascriptLogo,
+  Typescript: typescriptLogo,
+  MongoDB: mongoDBLogo,
+  "Next.js": nextLogo,
+  PostgreSQL: postgresqlLogo,
+  Python: pythonLogo,
+  Redux: reduxLogo
 } as const;
 
 type LogoKeys = keyof typeof logos;
@@ -28,7 +41,7 @@ export default function Tag({ skill }: TagProps) {
   const logo = logos[skill];
   return (
     <div className={styles.tag}>
-      <Image src={logo} alt={skill} width={20} height={20} />
+      <Image src={logo} alt={skill} className={styles.logo} />
       <p className={styles.skill}>{skill}</p>
     </div>
   );

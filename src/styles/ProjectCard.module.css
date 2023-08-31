@@ -82,6 +82,7 @@
   .description {
     font: var(--body-font-m);
   }
+
   .viewProject,
   .viewProject:visited,
   .viewProject:hover,
@@ -90,5 +91,10 @@
     display: block;
     text-decoration: underline;
     font: var(--body-alt-font-m);
+  }
+
+  .viewProjectIcon {
+    width: 15px;
+    height: 15px;
   }
 }
