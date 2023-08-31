@@ -12,7 +12,7 @@ const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Experience", href: "/#experience" },
   { label: "Projects", href: "/#projects" },
-  { label: "Resume", href: "/#resume" }
+  { label: "Resume", href: "/Martin_Cai_Resume.pdf" }
 ];
 
 export default function Navbar() {
@@ -50,7 +50,10 @@ export default function Navbar() {
 
   const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (href === "/") {
+    if (href.endsWith(".pdf")) {
+      window.open(href, "_blank");
+      return;
+    } else if (href === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (href.startsWith("/#")) {
       const elementId = href.substring(2);
