@@ -4,7 +4,7 @@
   gap: 25px;
   background: var(--light-matcha-gradient);
   border-radius: 20px;
-  padding: 42px;
+  padding: 42px 64px;
 }
 
 .header {
@@ -14,24 +14,24 @@
 }
 
 .name {
-  font: 700 48px var(--font-hk);
+  font: var(--h1-alt-font);
 }
 
 .icon {
   display: inline-block;
-  margin-left: 20px;
-  height: 30px;
-  width: auto;
+  margin-left: 15px;
+  width: 40px;
+  height: auto;
 }
 
 .date {
-  font: 700 20px var(--font-hk);
+  font: var(--body-alt-font);
   color: var(--dirty-matcha);
 }
 
 .extra {
-  font: 700 20px var(--font-hk);
-  margin-top: -20px;
+  font: var(--body-alt-font);
+  margin-top: -25px;
 }
 
 .tags {
@@ -49,30 +49,46 @@
   display: none;
 }
 
+@media screen and (max-width: 1280px) {
+  .name {
+    font-size: 35px;
+  }
+
+  .icon {
+    width: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .projectCard {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 34px 20px;
   }
 
   .header {
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
   }
 
   .name {
     font: var(--h1-font-m);
+    display: flex;
+    justify-content: center;
   }
 
   .icon {
     display: none;
   }
 
+  .date {
+    font: var(--body-alt-font-m);
+  }
+
   .extra {
     font: var(--body-alt-font-m);
-    margin-top: 5px;
-    margin-bottom: -10px;
+    margin-top: 0px;
+    margin-bottom: -20px;
   }
 
   .tags {

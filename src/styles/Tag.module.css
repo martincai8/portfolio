@@ -8,7 +8,9 @@
 }
 
 .skill {
-  font: 700 16px var(--font-hk);
+  font: var(--body-alt-font);
+  font-size: 16px;
+  white-space: nowrap;
 }
 
 .logo {
@@ -17,7 +19,15 @@
 }
 
 @media screen and (max-width: 768px) {
+  .tag {
+    padding: 4px 12px;
+    border-radius: 7px;
+  }
   .skill {
-    font-size: 10px;
+    font-size: 12px;
+  }
+
+  .logo {
+    height: 10px;
   }
 }

@@ -52,7 +52,7 @@ export default function ProjectCard({ name, startDate, endDate, description, tag
 
   return (
     <div className={styles.projectCard}>
-      {isMobile && <p className={styles.extra}>{extra}</p>}
+      {isMobile && extra && <p className={styles.extra}>{extra}</p>}
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.name}>{name}</span>
@@ -64,10 +64,10 @@ export default function ProjectCard({ name, startDate, endDate, description, tag
         </div>
 
         <p className={styles.date}>
-          {startDate} - {endDate}
+          {startDate} {endDate ? `- ${endDate}` : ""}
         </p>
       </div>
-      {!isMobile && <p className={styles.extra}>{extra}</p>}
+      {!isMobile && extra && <p className={styles.extra}>{extra}</p>}
       <div className={styles.tags}>
         {tags.map((tag, index) => (
           <Tag skill={tag} key={index} />
