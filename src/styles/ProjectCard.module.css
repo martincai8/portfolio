@@ -74,7 +74,7 @@
   .name {
     font: var(--h1-font-m);
     display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .icon {
@@ -89,6 +89,8 @@
     font: var(--body-alt-font-m);
     margin-top: 0px;
     margin-bottom: -20px;
+    display: flex;
+    text-align: center;
   }
 
   .tags {

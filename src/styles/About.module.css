@@ -53,6 +53,7 @@
 
   .h1 {
     font: var(--h1-font-m);
+    font-size: 40px;
   }
 
   .h3 {
