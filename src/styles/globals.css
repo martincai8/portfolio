@@ -2,6 +2,7 @@
   /* Desktop */
   --display-font: 800 70px var(--font-hk);
   --h1-font: 700 64px var(--font-hk);
+  --h1-alt-font: 700 48px var(--font-hk);
   --h2-font: 700 35px var(--font-hk);
   --h3-font: 700 24px var(--font-hk);
   --body-font: 500 20px var(--font-hk);
@@ -17,11 +18,14 @@
 
   /* Colors */
   --oat-milk: #fdfcfb;
-  --light-matcha-gradient: white;
+  --light-matcha-gradient: linear-gradient(to bottom, #f0f6f2, #f9f9f9);
   --foam: #e0ece5;
   --dirty-matcha: #86948b;
   --matcha: #408a67;
   --sesame: #2c2b33;
+
+  --navbar-height: 125px;
+  --navbar-height-m: 80px;
 }
 
 *,
@@ -35,19 +39,25 @@ body {
   line-height: 1.6;
   font: var(--body-font);
   color: var(--sesame);
+  background-color: var(--oat-milk);
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
 }
 
 body {
   min-height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* prettier-ignore */
 body, h1, h2, h3, h4, p, ul, li {
   margin: 0;
   padding: 0;
-  background-color: var(--oat-milk);
 }
 
 a {
@@ -62,11 +72,6 @@ a:hover {
 a:focus {
   text-decoration: none;
 }
-/* 
-img {
-  max-width: 100%;
-  display: block;
-} */
 
 input,
 textarea,
