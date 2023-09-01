@@ -54,7 +54,7 @@ export default function Project() {
           ]}
           tags={["Python", "Flask", "PostgreSQL"]}
           link="https://devpost.com/software/grounded-o92aiz"
-          extra="Stormhacks 2022 — Best UI/UX"
+          extra=""
         />
       </div>
     </div>
