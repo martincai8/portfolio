@@ -39,7 +39,7 @@
 }
 
 .cartoon {
-  height: clamp(250px, 30vw, 500px);
+  height: clamp(200px, 30vw, 400px);
   width: auto;
 }
 
