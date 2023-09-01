@@ -19,12 +19,13 @@
 @media screen and (max-width: 1280px) {
   .title {
     font-size: 48px;
-    text-align: center;
   }
 }
 
 @media screen and (max-width: 768px) {
   .title {
+    text-align: center;
     font: var(--h1-font-m);
+    font-size: 40px;
   }
 }
