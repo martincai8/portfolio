@@ -47,6 +47,10 @@
   margin-bottom: 5px;
 }
 
+.description li {
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .title {
     font: var(--h3-font-m);

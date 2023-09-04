@@ -16,6 +16,8 @@ export default function Experience() {
               endDate: "DEC 2022",
               description: [
                 "Engineered a reusable and scalable media pipeline using Ruby on Rails and AWS S3 to efficiently process and store thousands of user-uploaded images, slashing future development time from days to mere hours",
+                "Boosted customer engagement by 15%+ through the implementation of personalized transactional emails, notifying brands of new applicants to their campaigns",
+                "Led successful upgrade of the backend codebase from Ruby 2 to 3, updating 50+ gem dependencies and refactoring outdated code for improved performance and maintainability",
                 "Developed new features for Later.com's web application by creating custom backend controllers, endpoints, and services"
               ]
             }
