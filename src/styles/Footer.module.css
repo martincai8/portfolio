@@ -4,8 +4,8 @@
   gap: 40px;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
-  margin-bottom: 300px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .text {
   font: var(--h1-font);

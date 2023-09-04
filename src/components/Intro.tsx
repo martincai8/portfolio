@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/Intro.module.css";
 import ProfileIcons from "./ProfileIcons";
 import { m } from "framer-motion";

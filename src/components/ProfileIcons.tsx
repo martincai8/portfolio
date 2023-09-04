@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/ProfileIcons.module.css";
 import linkedin from "../../public/images/linkedin.svg";
 import github from "../../public/images/github.svg";

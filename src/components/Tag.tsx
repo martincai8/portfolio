@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import styles from "@/styles/Tag.module.css";
 import reactLogo from "../../public/images/react.png";

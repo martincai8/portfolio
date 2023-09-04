@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/Experience.module.css";
 import ExperienceCard from "./ExperienceCard";
 

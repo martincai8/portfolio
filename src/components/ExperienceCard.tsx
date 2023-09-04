@@ -1,4 +1,3 @@
-import React from "react";
 import Role, { RoleProps } from "@/components/Role";
 import styles from "@/styles/ExperienceCard.module.css";
 import Image from "next/image";
