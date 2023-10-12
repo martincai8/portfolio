@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Hanken_Grotesk } from "next/font/google";
 import { LazyMotion, domAnimation } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"]
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Component {...pageProps} />
+      <Analytics />
     </LazyMotion>
   );
 }
