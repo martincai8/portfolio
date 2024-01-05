@@ -12,7 +12,13 @@ export default function ExperienceCard({ company, logo, roles }: ExperienceCardP
   return (
     <div className={styles.experienceCard}>
       <div className={styles.title}>
-        <Image src={logo} alt={company} className={styles.logo} width={40} height={40}></Image>
+        <Image
+          src={logo}
+          alt={company}
+          className={styles.logo}
+          width={company === "SAP" ? 50 : 40}
+          height={company === "SAP" ? 30 : 40}
+        ></Image>
         <h2 className={styles.company}>{company}</h2>
       </div>
       {roles.map((role, index) => (

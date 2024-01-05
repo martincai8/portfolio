@@ -7,6 +7,18 @@ export default function Experience() {
       <h1 className={styles.title}>Experience</h1>
       <div className={styles.cards}>
         <ExperienceCard
+          company="SAP"
+          logo="/images/sap.png"
+          roles={[
+            {
+              title: "Software Development Intern",
+              startDate: "JAN 2024",
+              endDate: "PRESENT",
+              description: ["Building AI features for SAP's Concur Travel platform"]
+            }
+          ]}
+        />
+        <ExperienceCard
           company="Later"
           logo="/images/later.png"
           roles={[
@@ -23,7 +35,6 @@ export default function Experience() {
             }
           ]}
         />
-
         <ExperienceCard
           company="nwPlus"
           logo="/images/nwplus.png"
