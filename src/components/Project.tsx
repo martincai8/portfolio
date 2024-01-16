@@ -52,7 +52,7 @@ export default function Project() {
             "Designed and developed a web-based database management system to efficiently track inventory for a local jewelry business"
           ]}
           tags={["Python", "Flask", "PostgreSQL"]}
-          link="https://devpost.com/software/grounded-o92aiz"
+          link=""
           extra=""
         />
       </div>

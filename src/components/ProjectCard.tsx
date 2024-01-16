@@ -79,10 +79,12 @@ export default function ProjectCard({ name, startDate, endDate, description, tag
         ))}
       </ul>
 
-      <Link href={link} className={styles.viewProject}>
-        view project
-        <Image src={arrow} alt={link} className={styles.viewProjectIcon} />
-      </Link>
+      {link && (
+        <Link href={link} className={styles.viewProject}>
+          view project
+          <Image src={arrow} alt={link} className={styles.viewProjectIcon} />
+        </Link>
+      )}
     </div>
   );
 }

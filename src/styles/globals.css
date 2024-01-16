@@ -1,12 +1,12 @@
 :root {
   /* Desktop */
-  --display-font: 800 70px var(--font-hk);
-  --h1-font: 700 64px var(--font-hk);
-  --h1-alt-font: 700 48px var(--font-hk);
-  --h2-font: 700 35px var(--font-hk);
-  --h3-font: 700 24px var(--font-hk);
-  --body-font: 500 20px var(--font-hk);
-  --body-alt-font: 700 18px var(--font-hk);
+  --display-font: 800 60px var(--font-hk);
+  --h1-font: 700 56px var(--font-hk);
+  --h1-alt-font: 700 40px var(--font-hk);
+  --h2-font: 700 30px var(--font-hk);
+  --h3-font: 700 20px var(--font-hk);
+  --body-font: 500 18px var(--font-hk);
+  --body-alt-font: 700 16px var(--font-hk);
 
   /* Mobile */
   --h1-font-m: 700 34px var(--font-hk);
