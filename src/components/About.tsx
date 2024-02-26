@@ -35,8 +35,8 @@ export default function About() {
           organizing with my friends at nwPlus.
         </p>
         <p className={styles.description}>
-          Outside of my academic and professional life, you can often find me playing ultimate frisbee 🥏, exploring the
-          beauty of nature through hiking 🏔️, or whisking up a matcha latte 🍵!
+          Outside of my academic and professional life, you can often find me playing ultimate frisbee 🥏, turning
+          fleeting moments into lasting memories with my camera 📸, or whisking up a matcha latte 🍵!
         </p>
       </div>
     </div>
