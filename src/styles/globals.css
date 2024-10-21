@@ -42,6 +42,7 @@ body {
   background-color: var(--oat-milk);
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
+  cursor: url("/cursor.png"), auto;
 }
 
 body {

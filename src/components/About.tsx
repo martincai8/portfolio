@@ -25,18 +25,15 @@ export default function About() {
         {!isMobile && <h1 className={styles.h1}>About</h1>}
         <h3 className={styles.h3}>Hello there!</h3>
         <p className={styles.description}>
-          I&apos;m Martin, a full-stack developer with a passion for building products to improve the lives of those
-          around me. I&apos;m currently pursuing a degree in Computer Science as a 4th year student at the University of
-          British Columbia.
+          I&apos;m Martin, a full-stack developer with a passion for building smart solutions to real-world problems.
+          I&apos;m currently a 5th year Computer Science student at the University of British Columbia.
         </p>
         <p className={styles.description}>
-          I&apos;m passionate about harnessing my skills to empower others and create positive impacts in the community.
-          This passion shines through in my personal projects as well as in the hackathons I&apos;ve had the pleasure of
-          organizing with my friends at nwPlus.
-        </p>
-        <p className={styles.description}>
-          Outside of my academic and professional life, you can often find me playing ultimate frisbee 🥏, turning
-          fleeting moments into lasting memories with my camera 📸, or whisking up a matcha latte 🍵!
+          Outside of my academic and professional life, you can often find me organizing hackathons with my friends at{" "}
+          <a className={styles.link} href="https://nwplus.io" target="_blank" rel="noopener noreferrer">
+            nwPlus
+          </a>
+          , turning fleeting moments into lasting memories with my camera 📸, or whisking up a matcha latte 🍵!
         </p>
       </div>
     </div>

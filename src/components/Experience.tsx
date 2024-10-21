@@ -7,14 +7,30 @@ export default function Experience() {
       <h1 className={styles.title}>Experience</h1>
       <div className={styles.cards}>
         <ExperienceCard
+          company="Shopify"
+          logo="/images/shopify.svg"
+          roles={[
+            {
+              title: "(Incoming) Software Engineer Intern",
+              startDate: "JAN 2025",
+              endDate: "APR 2025",
+              description: ["more details to come!"]
+            }
+          ]}
+        />
+        <ExperienceCard
           company="SAP"
           logo="/images/sap.png"
           roles={[
             {
-              title: "Software Development Intern",
+              title: "Full-Stack Software Engineer Intern",
               startDate: "JAN 2024",
-              endDate: "PRESENT",
-              description: ["Building AI features for SAP's Concur Travel platform"]
+              endDate: "AUG 2024",
+              description: [
+                "Engineered React components and Go REST APIs to enable the phased rollout of SAP Concur's redesigned homepage, enhancing the user experience for 66 million users globally and driving a 12% boost in user satisfaction",
+                "Developed customer-facing features using React, Redux, and Typescript for Concur's AI-assisted hotel booking ﬂow, streamlining the reservation process",
+                "Implemented robust analytics tracking for the homepage and created dashboards to monitor user behavior, enabling data-driven decisions throughout rollout phases"
+              ]
             }
           ]}
         />
@@ -23,28 +39,34 @@ export default function Experience() {
           logo="/images/later.png"
           roles={[
             {
-              title: "Backend Developer Intern",
+              title: "Backend Engineer Intern",
               startDate: "MAY 2022",
               endDate: "DEC 2022",
               description: [
-                "Engineered a reusable and scalable media pipeline using Ruby on Rails and AWS S3 to efficiently process and store thousands of user-uploaded images, slashing future development time from days to mere hours",
+                "Architected and implemented a robust media pipeline using Ruby on Rails and AWS S3 to efﬁciently process and store high volumes of user-uploaded images, slashing implementation time for future projects by 92%",
+                "Leveraged the media pipeline to allow over 800 brands to add images to their inﬂuencer marketing campaigns",
                 "Boosted customer engagement by 15%+ through the implementation of personalized transactional emails, notifying brands of new applicants to their campaigns",
-                "Led successful upgrade of the backend codebase from Ruby 2 to 3, updating 50+ gem dependencies and refactoring outdated code for improved performance and maintainability",
-                "Developed new features for Later.com's web application by creating custom backend controllers, endpoints, and services"
+                "Led successful upgrade of the backend codebase from Ruby 2 to 3, updating 50+ gem dependencies and refactoring outdated code for improved performance and maintainability"
               ]
             }
           ]}
         />
         <ExperienceCard
-          company="nwPlus"
+          company="nwPlus UBC"
           logo="/images/nwplus.png"
           roles={[
             {
+              title: "Software Developer",
+              startDate: "APR 2024",
+              endDate: "PRESENT",
+              description: ["Building tools to support 3000+ students annually"]
+            },
+            {
               title: "Co-President",
               startDate: "APR 2023",
-              endDate: "PRESENT",
+              endDate: "MAR 2024",
               description: [
-                "Leading and managing 50 members of 8 subteams to enable the execution of 3 of Western Canada's largest hackathons (HackCamp, nwHacks, and cmd-f)"
+                "Led and managed 50 members in 8 subteams to enable the execution of 3 of Western Canada's largest hackathons (HackCamp, nwHacks, and cmd-f)"
               ]
             },
             {

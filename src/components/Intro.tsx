@@ -6,7 +6,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const descriptions = [
-  "a 4th year CS student.",
+  "a 5th year CS student.",
   1000,
   "a software developer.",
   1000,

@@ -11,8 +11,8 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Experience", href: "/#experience" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Resume", href: "/Martin_Cai_Resume.pdf" }
+  { label: "Projects", href: "/#projects" }
+  // { label: "Resume", href: "/Martin_Cai_Resume.pdf" }
 ];
 
 export default function Navbar() {
