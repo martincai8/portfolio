@@ -12,8 +12,8 @@ export default function Experience() {
           roles={[
             {
               title: "(Incoming) Software Engineer Intern",
-              startDate: "JAN 2025",
-              endDate: "APR 2025",
+              startDate: "",
+              endDate: "",
               description: ["more details to come!"]
             }
           ]}
