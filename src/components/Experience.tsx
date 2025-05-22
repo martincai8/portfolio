@@ -7,14 +7,29 @@ export default function Experience() {
       <h1 className={styles.title}>Experience</h1>
       <div className={styles.cards}>
         <ExperienceCard
+          company="Amazon"
+          logo="/images/amazon.jpg"
+          roles={[
+            {
+              title: "Software Engineer Intern",
+              startDate: "MAY 2025",
+              endDate: "JUL 2025",
+              description: ["💰 Payments team, more details to come!"]
+            }
+          ]}
+        />
+        <ExperienceCard
           company="Shopify"
           logo="/images/shopify.svg"
           roles={[
             {
-              title: "(Incoming) Software Engineer Intern",
-              startDate: "",
-              endDate: "",
-              description: ["more details to come!"]
+              title: "Software Engineer Intern",
+              startDate: "JAN 2025",
+              endDate: "APR 2025",
+              description: [
+                "Implemented timezone-aware bucketing for a core marketing pipeline (processing 15 million Kafka events daily), which resolved thousands of critical UTC-based aggregation errors and enabled accurate, localized marketing analytics for merchants",
+                "Developed an interactive Shopify Email onboarding guide for 167k merchants, reducing average setup time by 35%, increasing the new merchant retention rate by 3.1 percentage points, and boosting Shopify Forms installs by 61.5%"
+              ]
             }
           ]}
         />
@@ -23,7 +38,7 @@ export default function Experience() {
           logo="/images/sap.png"
           roles={[
             {
-              title: "Full-Stack Software Engineer Intern",
+              title: "Software Engineer Intern",
               startDate: "JAN 2024",
               endDate: "AUG 2024",
               description: [
